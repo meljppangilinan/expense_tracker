@@ -26,8 +26,9 @@ cp env.example .env
 
 ## ROADMAP
 
-- MORE CONFIGURABLE EMAIL PARSER
-- PDF PARSER
+- MORE CONFIGURABLE EMAIL PARSER / FILTER - DONE
+- OPEN PDF WITH PASSWORD (scenario with same password every file) with pdfminer.six
+- PDF PARSER (make it work with the PDF first)
 - ETL PIPELINE
 - SQL CONFIG
 - VISUALISATION TOOLS
