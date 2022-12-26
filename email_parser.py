@@ -6,8 +6,9 @@ from config import PASSWORD, EMAIL, IMAP_SERVER, ATTACHMENT_PATH
 
 
 def fetch_emails(mailbox):
-    # TODO: make this configurable
-    filters = AND(from_='statement@emiratesnbd.com', subject='Emirates NBD E-Statement for CURRENT ACCOUNT')
+    # TODO: IMPORT FROM 
+    # filters = AND(from_='statement@emiratesnbd.com', subject='Emirates NBD E-Statement for CURRENT ACCOUNT')
+    filters = AND(from_='estatement@bankfab.com')
     for msg in mailbox.fetch(filters):
         yield msg
 
