@@ -1,3 +1,4 @@
-imap-tools==1.0.0
+imap_tools==1.0.0
 pdfminer.six==20221105
 python-dotenv==0.21.0
+progressbar2==4.2.0
