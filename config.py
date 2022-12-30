@@ -9,17 +9,22 @@ EMAIL = os.getenv('EMAIL')
 PASSWORD = os.getenv('PASSWORD')
 IMAP_SERVER = os.getenv('IMAP_SERVER', 'imap.gmail.com')
 # supported banks: RAK, ENBD, FAB, CBD
-BANK = 'FAB'
+BANK = 'CBD'
 
 
 BANK_CONFIGS = {
-    "FAB": {
-        "filter": AND(from_='estatement@bankfab.com')
+    'FAB': {
+        'filter': AND(from_='estatement@bankfab.com')
     },
-    "ENBD": {
-        "filter": AND(from_='statement@emiratesnbd.com', subject='Emirates NBD E-Statement for CURRENT ACCOUNT')
+    'ENBD': {
+        'filter': AND(from_='statement@emiratesnbd.com', subject='Emirates NBD E-Statement for CURRENT ACCOUNT')
     },
-    # TODO: add more banks
+    'RAK': {
+        'filter': AND(from_='estatement@rakbank.ae')
+    },
+    'CBD': {
+        'filter': AND(from_='estatements@cbdstatements.ae')
+    }
 }
 
 BANK_CONFIG = BANK_CONFIGS[BANK]
